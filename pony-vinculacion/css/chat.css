@@ -1,0 +1,221 @@
+.chatbot-container{
+    width: 300px;
+    height: 350px;
+    margin left: 50px;
+    background-color: #f5f5f5;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+
+    margin-top: 20px;
+    margin-left: calc(100% - 320px);
+
+    position: fixed;
+    z-index: 999;
+
+    display: none;
+  }
+
+#chatbot {
+    background-color: #f5f5f5;
+    border: 1px solid #eef1f5;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+  }
+  
+  #header {
+    font-family: 'arial';
+    background-color: #1E3A8A;
+    color: #ffffff;
+    padding: 20px;
+    font-size: 14px;
+    font-weight: bold;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  #header h1{
+    font-size: 16px;
+    margin-left: 25px;
+  }
+
+  #header img{
+    height: 3em;
+    width: 3em;
+    margin-top: -5px;
+  }
+
+  message-container {
+    background: #ffffff;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  #conversation {
+    height: 350px;
+    overflow-y: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @keyframes message-fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .chatbot-message {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    line-height: 20px;
+    border-radius: 20px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    max-width: 100%;
+    padding: 0 15px;
+    font-family: 'arial';
+  }
+
+  .user-message {
+    justify-content: flex-end;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+.chatbot-text {
+    background-color: white;
+    color: #333333;
+    font-size: 13px;
+    font-weight: normal;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  #input-form {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #eef1f5;
+  }
+  
+  #input-field {
+    flex: 1;
+    height: 60px;
+    border: 1px solid #eef1f5;
+    border-radius: 4px;
+    padding: 0 10px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+    background: #ffffff;
+    color: #333333;
+    border: none;
+  }
+
+  .send-icon {
+    margin-right: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+    width: 2em;
+    height: 2em;
+  }
+  
+  #input-field:focus {
+    border-color: #333333;
+    outline: none;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+  
+  #submit-button {
+    background-color: transparent;
+    border: none;
+  }
+
+  p[sentTime]:hover::after {    
+    content: attr(sentTime);
+    position: absolute;
+    top: -15px;
+    font-size: 11px;
+    color: gray;
+  }
+
+  .chatbot p[sentTime]:hover::after {  
+    left: 15px;
+  }
+
+  .user-message p[sentTime]:hover::after {  
+    right: 15px;
+  }
+
+  /* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+  .chatButton{
+    margin-top: 540px;
+    margin-left: calc(100% - 120px);
+    position: fixed;
+    z-index: 999;
+
+    background: #1E3A8A;
+    border-radius: 50%;
+
+    height: 65px;
+    width: 65px;
+
+    background-image: url('../images/icons/chatbot.png');
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+
+    box-shadow: 9px 9px 5px 0px rgba(0,0,0,0.16);
+    -webkit-box-shadow: 9px 9px 5px 0px rgba(0,0,0,0.16);
+    -moz-box-shadow: 9px 9px 5px 0px rgba(0,0,0,0.16);
+
+    transition: transform 0.5s;
+  }
+
+  .chatButton.active{
+    background-image: url('../images/icons/close.png');
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+
+    transform: rotate(-45deg);
+  }

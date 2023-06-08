@@ -1,0 +1,117 @@
+body{
+	margin: 0;
+	overflow-x: hidden;
+}
+
+header{	
+	font-family: arial;
+	background: #1A386A;
+	text-align: center;
+	min-height: 90px;
+	position: sticky;
+	top: 0;
+	margin: 0;
+	z-index: 101;
+}
+
+#logo{
+	text-align: left;
+	padding-left: 20px;
+	padding-top: 20px;
+}
+
+#link{
+	text-align: center;
+	text-decoration: none;
+	font-weight: 600;
+	color: #FAFAFA;
+	margin: 10px 20px 10px 20px;
+}
+
+/*menu lateral*/
+
+.menuButton{
+	height: 50px;
+	width: 50px;
+
+	margin-top: -20px;
+	margin-left: 5px;
+
+	background-color: transparent;
+	background-image: url('../images/icons/menuIcon.png');
+	background-repeat: no-repeat;
+	background-size: 90%;
+	background-position: center;
+
+	border: none;
+
+	cursor: pointer;
+}
+
+.menuButton.active{
+	background-color: transparent;
+	background-image: url('../images/icons/cerrarMenu.png');
+	background-repeat: no-repeat;
+	background-size: 60%;
+	background-position: center;
+}
+
+.side{
+	transform: translateX(0%);
+  	transition: transform 0.5s;
+  	display: none;
+}
+
+.side.active{
+	transform: translateX(-199px);
+  	transition: transform 0.5s;
+  	display: block;
+}
+
+/*boton login*/
+.loginButton {
+	--glow-color: rgb(255, 255, 255);
+	--glow-spread-color: rgba(255, 255, 255, 0.1);
+	--enhanced-glow-color: rgb(231, 206, 255);
+	--btn-color: rgb(26, 56, 106);
+	border: .25em solid var(--glow-color);
+	padding: 1em 3em;
+	margin-top: -2em;
+	margin-left: calc(100% - 350px);
+	color: var(--glow-color);
+	font-size: 12px;
+	font-weight: bold;
+	background-color: var(--btn-color);
+	border-radius: 1em;
+	outline: none;
+	position: relative;
+	transition: all 0.3s;
+}
+
+.loginButton::after {
+	pointer-events: none;
+	content: "";
+	position: absolute;
+	top: 120%;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: var(--glow-spread-color);
+	filter: blur(2em);
+	opacity: .7;
+	transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+}
+
+.loginButton:hover {
+	color: var(--btn-color);
+	background-color: var(--glow-color);
+	box-shadow: 0 0 1em .25em var(--glow-color),
+		0 0 4em 2em var(--glow-spread-color),
+		inset 0 0 .75em .25em var(--glow-color);
+}
+
+.loginButton:active {
+	box-shadow: 0 0 0.6em .25em var(--glow-color),
+		0 0 2.5em 2em var(--glow-spread-color),
+		inset 0 0 .5em .25em var(--glow-color);
+}

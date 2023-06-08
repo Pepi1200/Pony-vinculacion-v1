@@ -1,0 +1,143 @@
+.videos{
+    margin-top: 20px;
+    margin-left: 100px;
+    width: calc(100% - 200px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.titulo{
+    margin-top: 50px;
+    margin-left: 90px;
+    margin-bottom: 20px;
+    font-family: 'arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.017em;
+
+    color: #000000;
+}
+
+.line{
+    position: absolute;
+    margin-left: 90px;
+    margin-top: -20px;
+    width: 62px;
+    height: 0px;
+
+    border: 3px solid #6366F1;
+    border-radius: 3px;
+}
+
+.videos iframe{
+    width: 355px;
+    height: 200px;
+}
+
+.videos h1{
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.017em;
+    margin-bottom: 10px;
+
+    color: #000000;
+}
+
+.videos h2{
+    max-width: 355px;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.017em;
+    margin-bottom: 80px;
+
+    color: #808080;
+}
+
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: calc(100% - 200px);
+    margin-left: 100px;
+}
+
+.about div{
+    width: 306px;
+    height: 599px;
+
+    background: #FFFFFF;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 31px;
+
+    margin-bottom: 10px;
+}
+
+.about img{
+    margin-top: 20px;
+    margin-left: 5%;
+    width: 90%;
+    height: 40%;
+    border-radius: 14px;
+}
+
+.about p{
+    width: 90%;
+    height: calc(60% - 60px);
+    margin-top: 20px;
+    margin-left: 5%;
+
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    letter-spacing: -0.017em;
+
+    color: #000000;
+}
+
+.about ul{
+    width: 85%;
+    height: calc(60% - 60px);
+    margin-top: 20px;
+
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    
+
+    color: #000000;
+}
+
+.content-facebook{
+    margin-top: 30px;
+    margin-bottom: 69px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}

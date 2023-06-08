@@ -1,0 +1,145 @@
+.titulo{
+	margin-top: 50px;
+	margin-left: 90px;
+	margin-bottom: 20px;
+	font-family: 'arial';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 22px;
+	line-height: 24px;
+	display: flex;
+	align-items: center;
+	letter-spacing: -0.017em;
+
+	color: #000000;
+}
+
+.line{
+	position: absolute;
+	margin-left: 90px;
+	margin-top: -20px;
+	width: 62px;
+	height: 0px;
+
+	border: 3px solid #6366F1;
+	border-radius: 3px;
+}
+
+.container{
+	display: flex;
+	align-content: center;
+	justify-content: center;
+}
+
+.registro{
+	max-width: 80%;
+	min-width: 550px;
+	background: #FFFFFF;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+	margin-bottom: 50px;
+
+}
+
+.usuario{
+	width: 30%;
+	min-width: 357px;
+	margin-left: 20px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	flex-wrap: wrap;
+}
+
+.usuario label{
+	margin-left: 4px;
+	font-family: 'Arial';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 17px;
+	display: flex;
+	align-items: center;
+	letter-spacing: -0.017em;
+
+	color: #000000;
+}
+
+.formulario{
+	width: 100%;
+	margin-top: 20px;
+	min-width: 550px;
+	margin-left: 20px;
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+.formulario div{
+	display: flex;
+	flex-direction: column;
+	min-width: 550px;
+}
+
+.formulario input{
+	box-sizing: border-box;
+	width: 500px;
+	height: 40px;
+	margin-bottom: 20px;
+
+	background: rgba(229, 229, 229, 0.24);
+	border: 1px solid #000000;
+	border-radius: 10px;
+}
+
+.hide{
+	display: block;
+}
+
+.formulario textarea{
+	box-sizing: border-box;
+	width: 500px;
+	height: 100px;
+	margin-bottom: 20px;
+	font-family: 'arial';
+	resize: none;
+
+	background: rgba(229, 229, 229, 0.24);
+	border: 1px solid #000000;
+	border-radius: 10px;
+}
+
+input:invalid {
+  border: red solid 2px;
+}
+
+#rfc{
+	text-transform: uppercase;
+}
+
+.registro button{
+	margin-bottom: 25px;
+	margin-left: calc(50% - 70px);
+	width: 140px;
+	height: 40px;
+
+	background: #1A386A;
+	border-radius: 10px;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 17px;
+	/* identical to box height */
+
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	letter-spacing: -0.017em;
+
+	color: #FFFFFF;
+}
