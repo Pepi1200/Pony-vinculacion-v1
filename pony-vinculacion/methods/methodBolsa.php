@@ -42,7 +42,7 @@ if (isset($_GET['pagina'])) {
 $desplazamiento = ($paginaActual - 1) * $vacantesPorPagina; // Calcular el desplazamiento para la consulta SQL
 
 // Realizar la consulta para obtener las vacantes correspondientes a la página actual
-$sql = "SELECT v.id_vacante, v.titulo, v.descripcion, e.nombre_comercial, v.servicio_social, v.practicas_profesionales, v.vacante_laboral, v.carreras, v.visible,v.categoria, v.aceptada, e.logo_empresa
+$sql = "SELECT v.id_vacante, v.titulo, v.descripcion, e.nombre_comercial, v.servicio_social, v.practicas_profesionales, v.vacante_laboral, v.carreras, v.visible,v.categoria, v.aceptada, e.logo_empresa, v.datos_contacto
     FROM vacante v
     INNER JOIN empresa e ON v.id_empresa = e.folio
     WHERE (v.titulo LIKE '%$palabraClave%' OR v.descripcion LIKE '%$palabraClave%' OR v.categoria LIKE '%$palabraClave%' OR e.nombre_comercial LIKE '%$palabraClave%' )and v.carreras LIKE '%$carrera%' and $opcionesDesarrollo = 1 AND v.visible=1 AND v.aceptada=1
@@ -65,6 +65,7 @@ if ($result->num_rows > 0) {
         $descripcion = nl2br(str_replace('\n', "\n", htmlspecialchars($row["descripcion"])));
         $carreras = $row["carreras"];
         $logo = $row['logo_empresa'];
+        $datos_contacto = $row['datos_contacto'];
 
         // Generar el código HTML para la vacante
         echo "<div class=\"modificarVacante\">";
@@ -103,7 +104,8 @@ if ($result->num_rows > 0) {
 
         
         echo '</ul>';
-        echo '<p>' . $descripcion . '</p>';
+        echo '<p>' . $descripcion;
+        echo '<br><br> Datos de contacto:<br>' . $datos_contacto . '</p>';
         echo '</div>';
         echo '</div>';
     }
